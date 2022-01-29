@@ -7,14 +7,18 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="testBean1"
-          class="com.trackenshure.model.TestBean">
+    <bean id="musicBean"
+          class="com.trackenshure.model.ClassicalMusic">
     </bean>
 
-    <bean id="testBean2"
-          class="com.trackenshure.model.TestBean">
-        <constructor-arg value="Serhii"/>
-    </bean>
+    <!--<bean id="testBean1"-->
+          <!--class="com.trackenshure.model.TestBean">-->
+    <!--</bean>-->
+
+    <!--<bean id="testBean2"-->
+          <!--class="com.trackenshure.model.TestBean">-->
+        <!--<constructor-arg value="Serhii"/>-->
+    <!--</bean>-->
 
     <!--<bean id="audi" class="com.trackenshure.model.Car">-->
     <!--<constructor-arg value="1"/>-->
@@ -22,13 +26,13 @@
     <!--<constructor-arg value="read"/>-->
     <!--</bean>-->
 
-    <bean id="audi" class="com.trackenshure.model.Car">
-        <property name="id" value="1"/>
-        <property name="name" value="audi"/>
-        <property name="color" value="read"/>
-    </bean>
+    <!--<bean id="audi" class="com.trackenshure.model.Car">-->
+        <!--<property name="id" value="1"/>-->
+        <!--<property name="name" value="audi"/>-->
+        <!--<property name="color" value="read"/>-->
+    <!--</bean>-->
 
-    <bean id="bmw" class="com.trackenshure.model.Car">
-    </bean>
+    <!--<bean id="bmw" class="com.trackenshure.model.Car">-->
+    <!--</bean>-->
 
 </beans>

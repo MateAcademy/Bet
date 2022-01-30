@@ -9,36 +9,42 @@
 
     <context:property-placeholder location="classpath:musicPlayer.properties"/>
 
-    <bean id="musicBean"
-          class="com.trackenshure.model.RockMusic">
-    </bean>
+    <bean id="musicBean1" class="com.trackenshure.model.RockMusic"/>
+    <bean id="musicBean2" class="com.trackenshure.model.ClassicalMusic"/>
+    <bean id="musicBean3" class="com.trackenshure.model.KantriMusic"/>
 
     <bean id="musicPlayer" class="com.trackenshure.MusicPlayer">
-    <property name="music" ref="musicBean"/>
+        <property name="listMusic">
+            <list>
+                <ref bean="musicBean1"/>
+                <ref bean="musicBean2"/>
+                <ref bean="musicBean3"/>
+            </list>
+        </property>
 
-    <property name="name" value="${musicPlayer.name}"/>
-    <property name="volume" value="${musicPlayer.volume}"/>
+        <property name="name" value="${musicPlayer.name}"/>
+        <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
 
     <!--<bean id="musicPlayer" class="com.trackenshure.MusicPlayer">-->
-        <!--<property name="music" ref="musicBean"/>-->
+    <!--<property name="music" ref="musicBean"/>-->
 
-        <!--<property name="name" value="Some name"/>-->
-        <!--<property name="volume" value="50"/>-->
+    <!--<property name="name" value="Some name"/>-->
+    <!--<property name="volume" value="50"/>-->
     <!--</bean>-->
 
     <!--<bean id="musicPlayer"-->
-          <!--class="com.trackenshure.MusicPlayer">-->
-        <!--<constructor-arg ref="musicBean"/>-->
+    <!--class="com.trackenshure.MusicPlayer">-->
+    <!--<constructor-arg ref="musicBean"/>-->
     <!--</bean>-->
 
     <!--<bean id="testBean1"-->
-          <!--class="com.trackenshure.model.TestBean">-->
+    <!--class="com.trackenshure.model.TestBean">-->
     <!--</bean>-->
 
     <!--<bean id="testBean2"-->
-          <!--class="com.trackenshure.model.TestBean">-->
-        <!--<constructor-arg value="Serhii"/>-->
+    <!--class="com.trackenshure.model.TestBean">-->
+    <!--<constructor-arg value="Serhii"/>-->
     <!--</bean>-->
 
     <!--<bean id="audi" class="com.trackenshure.model.Car">-->
@@ -48,9 +54,9 @@
     <!--</bean>-->
 
     <!--<bean id="audi" class="com.trackenshure.model.Car">-->
-        <!--<property name="id" value="1"/>-->
-        <!--<property name="name" value="audi"/>-->
-        <!--<property name="color" value="read"/>-->
+    <!--<property name="id" value="1"/>-->
+    <!--<property name="name" value="audi"/>-->
+    <!--<property name="color" value="read"/>-->
     <!--</bean>-->
 
     <!--<bean id="bmw" class="com.trackenshure.model.Car">-->

@@ -5,6 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author Sergey Klunniy
  */
@@ -12,16 +15,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MusicPlayer {
-    private Music music;
+    private List<Music> listMusic = new ArrayList<>();
+//    private Music music;
     private String name;
     private int volume;
 
     //IoC
-    public MusicPlayer(Music music) {
-        this.music = music;
+    public MusicPlayer(List<Music> music) {
+        this.listMusic = music;
     }
 
     public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+        for (Music music : listMusic) {
+            System.out.println("Playing: " + music.getSong());
+        }
+//        System.out.println("Playing: " + music.getSong());
     }
 }

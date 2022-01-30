@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
  */
 @Data
 @NoArgsConstructor
+@AllArgsConstructor
 public class MusicPlayer {
     private Music music;
     private String name;

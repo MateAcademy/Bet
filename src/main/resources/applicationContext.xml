@@ -11,10 +11,14 @@
           class="com.trackenshure.model.RockMusic">
     </bean>
 
-    <bean id="musicPlayer"
-          class="com.trackenshure.MusicPlayer">
-        <constructor-arg ref="musicBean"/>
+    <bean id="musicPlayer" class="com.trackenshure.MusicPlayer">
+        <property name="music" ref="musicBean"/>
     </bean>
+
+    <!--<bean id="musicPlayer"-->
+          <!--class="com.trackenshure.MusicPlayer">-->
+        <!--<constructor-arg ref="musicBean"/>-->
+    <!--</bean>-->
 
     <!--<bean id="testBean1"-->
           <!--class="com.trackenshure.model.TestBean">-->

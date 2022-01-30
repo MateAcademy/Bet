@@ -6,6 +6,6 @@ package com.trackenshure.model;
 public class ClassicalMusic implements Music {
     @Override
     public String getSong() {
-        return "Hungarian Rapsody";
+        return "ClassicalMusic: Hungarian Rapsody";
     }
 }

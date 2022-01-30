@@ -5,4 +5,5 @@ package com.trackenshure.model;
  */
 public interface Music {
     String getSong();
+
 }

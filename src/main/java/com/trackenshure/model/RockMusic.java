@@ -6,6 +6,6 @@ package com.trackenshure.model;
 public class RockMusic implements Music {
     @Override
     public String getSong() {
-        return "Wind cries Mary";
+        return "RockMusic: Wind cries Mary";
     }
 }

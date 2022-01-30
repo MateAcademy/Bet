@@ -13,6 +13,9 @@
 
     <bean id="musicPlayer" class="com.trackenshure.MusicPlayer">
         <property name="music" ref="musicBean"/>
+
+        <property name="name" value="Some name"/>
+        <property name="volume" value="50"/>
     </bean>
 
     <!--<bean id="musicPlayer"-->

@@ -17,5 +17,4 @@ import org.springframework.context.annotation.Configuration;
         "com.trackenshure.service"
 })
 public class AppConfig {
-
 }

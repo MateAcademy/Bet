@@ -3,6 +3,7 @@ package com.trackenshure.service;
 import com.trackenshure.dao.UserDao;
 import com.trackenshure.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,11 +15,8 @@ import java.util.List;
 public class UserServiceImpl implements UserService {
 
     @Autowired
+    @Qualifier(value = "userDaoImpl")
     private UserDao userDao;
-
-//    public UserServiceImpl(UserDao userDao) {
-//        this.userDao = userDao;
-//    }
 
     @Override
     public void add(User user) {
@@ -27,6 +25,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public List<User> listUsers() {
-        return userDao.listUsers();
+        //return userDao.listUsers();
+        return null;
     }
 }

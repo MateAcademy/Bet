@@ -53,14 +53,14 @@ public class TestSpring {
         userService.add(new User("Bruce", "Willis", "bruce.willis@example.com"));
 
         // Get Users
-        List<User> users = userService.listUsers();
-        for (User user : users) {
-            System.out.println("Id = " + user.getId());
-            System.out.println("First Name = " + user.getFirstName());
-            System.out.println("Last Name = " + user.getLastName());
-            System.out.println("Emal = " + user.getEmail());
-            System.out.println();
-        }
+//        List<User> users = userService.listUsers();
+//        for (User user : users) {
+//            System.out.println("Id = " + user.getId());
+//            System.out.println("First Name = " + user.getFirstName());
+//            System.out.println("Last Name = " + user.getLastName());
+//            System.out.println("Emal = " + user.getEmail());
+//            System.out.println();
+//        }
 
 
     }

@@ -16,12 +16,6 @@ public class BetDaoImpl implements BetDao {
 
     @Override
     public List<Bet> getAll() {
-//        List<Bet> bets = new ArrayList<>();
-//        int c = Storage.bets.size();
-//        for (int i = 0; i < Storage.bets.size(); i++) {
-//            bets.add(Storage.bets.get(i));
-//        }
-//        return bets;
         return Storage.bets;
     }
 }

@@ -1,6 +1,7 @@
 package com.trackenshure;
 
 import com.trackenshure.config.AppConfig;
+import com.trackenshure.model.ClassicalMusic;
 import com.trackenshure.model.Music;
 import com.trackenshure.model.RockMusic;
 import com.trackenshure.model.User;
@@ -16,6 +17,7 @@ import java.util.List;
 public class TestSpring {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        Object musicBean_classicalMusic = context.getBean("musicBean2", ClassicalMusic.class);
 
         //Music music = context.getBean("musicBean", Music.class);
 

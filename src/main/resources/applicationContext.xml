@@ -15,18 +15,18 @@
           destroy-method="doMyDestroy"/>
     <bean id="musicBean3" class="com.trackenshure.model.KantriMusic" scope="prototype"/>
 
-    <!--<bean id="musicPlayer" class="com.trackenshure.MusicPlayer" scope="prototype">-->
-    <!--<property name="listMusic">-->
-    <!--<list>-->
-    <!--<ref bean="musicBean1"/>-->
-    <!--<ref bean="musicBean2"/>-->
-    <!--<ref bean="musicBean3"/>-->
-    <!--</list>-->
-    <!--</property>-->
+    <bean id="musicPlayer" class="com.trackenshure.MusicPlayer" scope="prototype">
+    <property name="listMusic">
+    <list>
+    <ref bean="musicBean1"/>
+    <ref bean="musicBean2"/>
+    <ref bean="musicBean3"/>
+    </list>/
+    </property>
 
-    <!--<property name="name" value="${musicPlayer.name}"/>-->
-    <!--<property name="volume" value="${musicPlayer.volume}"/>-->
-    <!--</bean>-->
+    <property name="name" value="${musicPlayer.name}"/>
+    <property name="volume" value="${musicPlayer.volume}"/>
+    </bean>
 
     <!--<bean id="musicPlayer" class="com.trackenshure.MusicPlayer">-->
     <!--<property name="music" ref="musicBean"/>-->

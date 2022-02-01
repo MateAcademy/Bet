@@ -7,10 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class CinemaHall {
+public class Bet {
 
-    private Long id;
-    private int capacity;
-    private String description;
-
+    private int value;
+    private Double risk;
 }

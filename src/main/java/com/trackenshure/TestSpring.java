@@ -1,15 +1,9 @@
 package com.trackenshure;
 
 import com.trackenshure.config.AppConfig;
-import com.trackenshure.model.ClassicalMusic;
-import com.trackenshure.model.Music;
-import com.trackenshure.model.RockMusic;
-import com.trackenshure.model.User;
-import com.trackenshure.service.UserService;
+import com.trackenshure.model.Movie;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.List;
 
 /**
  * @author Sergey Klunniy
@@ -49,10 +43,10 @@ public class TestSpring {
         UserService userService = context1.getBean(UserService.class);
 
         // AddUsers
-        userService.add(new User("John", "Wick", "john.wick@example.com"));
-        userService.add(new User("Jason", "Statham", "jason.stathem@example.com"));
-        userService.add(new User("Chuck", "Norris", "chuck.norris@example.com"));
-        userService.add(new User("Bruce", "Willis", "bruce.willis@example.com"));
+        userService.add(new Movie("John", "Wick", "john.wick@example.com"));
+        userService.add(new Movie("Jason", "Statham", "jason.stathem@example.com"));
+        userService.add(new Movie("Chuck", "Norris", "chuck.norris@example.com"));
+        userService.add(new Movie("Bruce", "Willis", "bruce.willis@example.com"));
 
         // Get Users
 //        List<User> users = userService.listUsers();

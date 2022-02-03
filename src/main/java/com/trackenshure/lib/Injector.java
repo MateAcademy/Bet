@@ -1,9 +1,6 @@
 package com.trackenshure.lib;
 
-import com.trackenshure.controller.ConsoleHandler;
-import com.trackenshure.dao.impl.BetDaoImpl;
-import com.trackenshure.dao.impl.BetDaoJDBCImpl;
-import com.trackenshure.factory.Factory;
+import com.trackenshure.factory.BetDaoFactory;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -23,7 +20,8 @@ public class Injector {
             if (field.getAnnotation(Inject.class) != null) {
 
                 field.setAccessible(true);
-                field.set(instance, Factory.getBetDao());
+                //в этом месте я должен внедрить класс нужный класс над которым аннотация дао
+                field.set(instance, BetDaoFactory.getBetDao());
             }
         }
         return instance;

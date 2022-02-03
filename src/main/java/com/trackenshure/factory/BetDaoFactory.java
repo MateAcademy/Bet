@@ -8,18 +8,31 @@ import com.trackenshure.dao.impl.HumanDaoImpl;
 /**
  * @author Sergey Klunniy
  */
-public class Factory {
+public class BetDaoFactory {
     private static BetDao betDao;
     private static HumanDao humanDao;
 
-    public static BetDao getBetDao() {
+    public static Object getObject(Object o) {
+        String nameClazz = o.getClass().getName();
+        Object instanse;
+        switch (nameClazz) {
+            case "BetDao":
+                return instanse = getBetDao();
+            case "HumanDao":
+                return instanse = getHumanDao();
+
+        }
+        return instanse;
+    }
+
+    private static BetDao getBetDao() {
         if (betDao == null) {
             betDao = new BetDaoImpl();
         }
         return betDao;
     }
 
-    public static HumanDao getHumanDao() {
+    private static HumanDao getHumanDao() {
         if (humanDao == null) {
             humanDao = new HumanDaoImpl();
         }

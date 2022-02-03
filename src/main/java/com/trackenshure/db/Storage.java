@@ -7,6 +7,7 @@ import lombok.Data;
 import java.util.ArrayList;
 import java.util.List;
 
+// Это наша БД
 @Data
 public class Storage {
     public static final List<Bet> bets = new ArrayList<>();

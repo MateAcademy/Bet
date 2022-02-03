@@ -1,7 +1,7 @@
 package com.trackenshure.dao.impl;
 
 import com.trackenshure.dao.BetDao;
-import com.trackenshure.dao.DbProperties;
+import com.trackenshure.DbProperties;
 import com.trackenshure.model.Bet;
 
 import java.util.List;

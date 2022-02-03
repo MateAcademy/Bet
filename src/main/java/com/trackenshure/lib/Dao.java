@@ -3,7 +3,10 @@ package com.trackenshure.lib;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-//над тим полем яке ми хочемо ініціалізувати
+/**
+ * @author Sergey Klunniy
+ */
+// над класом ставилься який ми хочемо заїнжектити
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Inject {
+public @interface Dao {
 }

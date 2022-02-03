@@ -1,28 +1,27 @@
 package com.trackenshure.controller;
 
 import com.trackenshure.dao.BetDao;
-import com.trackenshure.dao.DbProperties;
-import com.trackenshure.dao.impl.BetDaoImpl;
-import com.trackenshure.dao.impl.BetDaoJDBCImpl;
-import com.trackenshure.db.Storage;
+import com.trackenshure.dao.HumanDao;
 import com.trackenshure.lib.Inject;
 import com.trackenshure.model.Bet;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 // Dependency injection
 
-public class ConsoleHandler {
+public class  ConsoleHandler {
 
     @Inject
     private BetDao betDao;
+    @Inject
+    private HumanDao humanDao;
 //    DbProperties dbProperties = new DbProperties("some value");
 //    private BetDao betDao = new BetDaoJDBCImpl(dbProperties);
 //    private BetDao betDao = new BetDaoImpl();
 
     public void handle() {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Введіть value та risk для вашої ставки:");
         while (true) {
             String command = sc.nextLine();
             if (command.equals("q")) {

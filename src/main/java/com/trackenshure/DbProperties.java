@@ -1,4 +1,4 @@
-package com.trackenshure.dao;
+package com.trackenshure;
 
 public class DbProperties {
     private String someProp;

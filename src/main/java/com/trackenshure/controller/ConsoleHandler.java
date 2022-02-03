@@ -14,7 +14,7 @@ public class  ConsoleHandler {
 
     @Inject
     private BetDao betDao;
-    //private BetDao betDao = BetDaoFactory.getBrtDao();
+    //private BetDao betDao = BetDaoFactory.getBetDao();
     @Inject
     private HumanDao humanDao;
 //    DbProperties dbProperties = new DbProperties("some value");

@@ -12,17 +12,16 @@ public class BetDaoFactory {
     private static BetDao betDao;
     private static HumanDao humanDao;
 
-    public static Object getObject(Object o) {
-        String nameClazz = o.getClass().getName();
-        Object instanse;
-        switch (nameClazz) {
-            case "BetDao":
-                return instanse = getBetDao();
-            case "HumanDao":
-                return instanse = getHumanDao();
+    public static Object getObject(Class o) {
+        String nameClazz = o.getSimpleName();
 
-        }
-        return instanse;
+        if (nameClazz.startsWith("BetDao"))
+            return getBetDao();
+
+        if (nameClazz.startsWith("HumanDao"))
+            return getHumanDao();
+
+        return null;
     }
 
     private static BetDao getBetDao() {

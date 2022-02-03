@@ -1,6 +1,7 @@
 package com.trackenshure.lib;
 
 import com.trackenshure.Main;
+import com.trackenshure.controller.ConsoleHandler;
 import com.trackenshure.factory.BetDaoFactory;
 import org.reflections.Reflections;
 
@@ -47,5 +48,9 @@ public class Injector {
             return cls;
         }
         return null;
+    }
+
+    public static void injectDependency() throws ClassNotFoundException {
+        Class<ConsoleHandler> consoleHandlerClass = (Class<ConsoleHandler>) Class.forName("com.trackenshure.controller.ConsoleHandler");
     }
 }

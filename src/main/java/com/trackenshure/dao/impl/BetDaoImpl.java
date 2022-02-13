@@ -8,6 +8,7 @@ import com.trackenshure.model.Bet;
 import java.util.ArrayList;
 import java.util.List;
 
+//Наш класс для работы с Базой данных и таблицой ставок
 @Dao
 public class BetDaoImpl implements BetDao {
 
@@ -21,3 +22,4 @@ public class BetDaoImpl implements BetDao {
         return Storage.bets;
     }
 }
+ 

@@ -22,3 +22,27 @@ public class HumanDaoImpl implements HumanDao {
         return Storage.humans;
     }
 }
+
+class A {
+    public static void main(String[] args) {
+
+        char veriable = '*';
+
+        switch (veriable) {
+            default:
+                System.out.println("?");
+            case '*' :
+                System.out.println("b");
+                break;
+            case '/' :
+                System.out.println("a");
+            case '+' :
+                System.out.println("c");
+            case '-' :
+                System.out.println("c");
+                break;
+
+        }
+
+    }
+}

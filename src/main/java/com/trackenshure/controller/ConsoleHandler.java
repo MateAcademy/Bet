@@ -5,12 +5,16 @@ import com.trackenshure.dao.HumanDao;
 import com.trackenshure.factory.BetDaoFactory;
 import com.trackenshure.lib.Inject;
 import com.trackenshure.model.Bet;
+import com.trackenshure.model.Car;
 
 import java.util.Scanner;
 
 // Dependency injection
 
 public class  ConsoleHandler {
+
+    @Inject
+    private Car car;
 
     @Inject
     private BetDao betDao;

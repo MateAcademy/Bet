@@ -5,7 +5,8 @@ import com.trackenshure.model.Movie;
 import java.util.List;
 
 public interface MovieService {
-    Movie add(Movie movie);
 
+    Movie add(Movie movie);
     List<Movie> getAll();
+
 }

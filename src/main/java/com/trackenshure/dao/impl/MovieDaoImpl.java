@@ -2,7 +2,9 @@ package com.trackenshure.dao.impl;
 
 import com.trackenshure.HibernateUtil;
 import com.trackenshure.dao.MovieDao;
+import com.trackenshure.lib.Dao;
 import com.trackenshure.model.Movie;
+import lombok.Data;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
@@ -10,6 +12,7 @@ import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
+@Data
 @Dao
 public class MovieDaoImpl implements MovieDao {
     @Override

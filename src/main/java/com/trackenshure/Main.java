@@ -1,5 +1,6 @@
 package com.trackenshure;
 
+import com.trackenshure.lib.Injector;
 import com.trackenshure.model.Movie;
 import com.trackenshure.service.MovieService;
 

@@ -2,6 +2,7 @@ package com.trackenshure.controller;
 
 import com.trackenshure.dao.BetDao;
 import com.trackenshure.dao.HumanDao;
+import com.trackenshure.dao.impl.BetDaoImpl;
 import com.trackenshure.factory.BetDaoFactory;
 import com.trackenshure.lib.Inject;
 import com.trackenshure.model.Bet;

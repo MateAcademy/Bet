@@ -19,7 +19,6 @@ public class UserDaoImpl implements UserDao {
 
     private List<User> userList = new ArrayList<>();
 
-
     @Override
     public List<User> getAll() {
         List<User> users = new ArrayList<>();

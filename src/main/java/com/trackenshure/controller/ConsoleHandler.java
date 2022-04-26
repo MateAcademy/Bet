@@ -14,14 +14,14 @@ import java.util.Scanner;
 
 public class  ConsoleHandler {
 
-    @Inject
-    private Car car;
+//    @Inject
+//    private Car car;
 
     @Inject
     private BetDao betDao;
     //private BetDao betDao = BetDaoFactory.getBetDao();
-    @Inject
-    private HumanDao humanDao;
+//    @Inject
+//    private HumanDao humanDao;
 //    DbProperties dbProperties = new DbProperties("some value");
 //    private BetDao betDao = new BetDaoJDBCImpl(dbProperties);
 //    private BetDao betDao = new BetDaoImpl();

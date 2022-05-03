@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<hibernate-mapping xmlns="http://www.hibernate.org/xsd/hibernate-mapping">-->
+<!--    <class name="com.trackenshure.model.Student">-->
+<!--        <id name="id" column="id">-->
+<!--            <generator class="native"/>-->
+<!--        </id>-->
+<!--        <property lazy="true" not-null="true" name="name"/>-->
+<!--    </class>-->
+<!--</hibernate-mapping>-->

@@ -11,4 +11,10 @@ public class Bet {
 
     private int value;
     private Double risk;
+    private Human human;
+
+    public Bet(int value, Double risk) {
+        this.value = value;
+        this.risk = risk;
+    }
 }

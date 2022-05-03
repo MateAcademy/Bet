@@ -5,6 +5,7 @@ import com.trackenshure.DbProperties;
 import com.trackenshure.model.Bet;
 
 import java.util.List;
+import java.util.Optional;
 
 public class BetDaoJDBCImpl implements BetDao {
 
@@ -21,6 +22,11 @@ public class BetDaoJDBCImpl implements BetDao {
 
     @Override
     public List<Bet> getAll() {
+        return null;
+    }
+
+    @Override
+    public Optional<Bet> getBet(int index) {
         return null;
     }
 }

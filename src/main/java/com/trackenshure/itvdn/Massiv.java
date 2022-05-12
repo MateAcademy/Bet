@@ -18,6 +18,10 @@ public class Massiv {
 //              8) что делает метод  System.arraycopy() и метод  Arrays.copyOf()
 
     public static void main(String[] args) {
+
+        int[] arr = new int[]{};
+        arr[0] = 5;
+
         for (int i = 0; i < 20; i++) {
             System.out.print(((int) (Math.random() * 21) - 10) + " ");
         }

@@ -47,17 +47,15 @@ public class ConsoleHandler {
                     int value = Integer.parseInt(betData[0]);
                     double risk = Double.parseDouble(betData[1]);
                     bet = new Bet(value, risk);
-
-
                 } catch (NumberFormatException e) {
                     System.out.println("Данные введены не корректно ");
                 }
 
                 betDao.add(bet);
-//todo :
-//                Optional<Bet> betFromDb = betDao.getBet(3);
-                Optional<Bet> optionalBet = betDao.getBet(3);
-                optionalBet.ifPresent(x -> {x.setRisk(0.3);
+
+
+                Optional<Bet> betFromDb = betDao.getBet(3);
+                betFromDb.ifPresent(x -> {x.setRisk(0.3);
                     System.out.println(x);});
 
 //                if (betFromDb.isPresent()) {
@@ -78,7 +76,7 @@ public class ConsoleHandler {
 //                Collections.emptyList();
 
 
-                System.out.println(betDao.getBet(3));
+ //               System.out.println(betDao.getBet(3));
                 System.out.println(bet == null ? null : bet.toString());
             }
         }

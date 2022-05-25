@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 //Наш класс для работы с Базой данных и таблицой ставок
-@Dao
+//@Dao
 public class BetDaoImpl implements BetDao {
 
     @Override

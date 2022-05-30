@@ -13,7 +13,7 @@ import java.util.Set;
 
 public class Injector {
 
-    public static Object getInstanse(Class clazz) throws IllegalAccessException, NoSuchMethodException,
+    public static Object getInstance(Class clazz) throws IllegalAccessException, NoSuchMethodException,
             InvocationTargetException, InstantiationException {
 
         //создаю через конструктор обьект сlazz
@@ -32,6 +32,7 @@ public class Injector {
                 //в этом месте я должен внедрить класс нужный класс над которым аннотация дао
                 //field.set(instance, BetDaoFactory.getBetDao());
                 field.set(instance, BetDaoFactory.getObject(aClass));
+//                field.set(instance, aClass);
 
             }
         }

@@ -7,12 +7,15 @@ import com.trackenshure.factory.BetDaoFactory;
 import com.trackenshure.lib.Inject;
 import com.trackenshure.model.Bet;
 import com.trackenshure.model.Car;
+import com.trackenshure.model.Human;
 
+import java.util.Collections;
+import java.util.Optional;
 import java.util.Scanner;
 
 // Dependency injection
 
-public class  ConsoleHandler {
+public class ConsoleHandler {
 
 //    @Inject
 //    private Car car;
@@ -27,7 +30,7 @@ public class  ConsoleHandler {
 //    private BetDao betDao = new BetDaoImpl();
 
     public void handle() {
-        try (Scanner sc = new Scanner(System.in)){
+        try (Scanner sc = new Scanner(System.in)) {
             System.out.println("Введіть value та risk для вашої ставки:");
             while (true) {
                 String command = sc.nextLine();
@@ -42,12 +45,36 @@ public class  ConsoleHandler {
                     int value = Integer.parseInt(betData[0]);
                     double risk = Double.parseDouble(betData[1]);
                     bet = new Bet(value, risk);
-
                 } catch (NumberFormatException e) {
-                    System.out.println("будь - ласка, введіть корректні данні " + e);
+                    System.out.println("Данные введены не корректно ");
                 }
 
                 betDao.add(bet);
+
+
+                Optional<Bet> betFromDb = betDao.getBet(3);
+                betFromDb.ifPresent(x -> {x.setRisk(0.3);
+                    System.out.println(x);});
+
+//                if (betFromDb.isPresent()) {
+//                    Bet bet1 = betFromDb.get();
+//                    bet1.setRisk(0.4);
+//                }
+
+//                if (betFromDb != null) {
+//                    betFromDb.setRisk(0.4);
+//                    Human human = betFromDb.getHuman();
+//                    if (human!=null) {
+//                        betFromDb.getHuman().getCar();
+//                    }
+//                }
+//
+//                betFromDb.getHuman().getCar();
+//                betDao.getAll();
+//                Collections.emptyList();
+
+
+ //               System.out.println(betDao.getBet(3));
                 System.out.println(bet == null ? null : bet.toString());
             }
         }

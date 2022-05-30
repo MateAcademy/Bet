@@ -16,4 +16,6 @@ public class Human {
     private String name;
     private String email;
 
+    private Car car;
+
 }

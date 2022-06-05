@@ -6,9 +6,13 @@ import com.trackenshure.lib.Dao;
 import com.trackenshure.model.Bet;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+/*
+НАШ КЛАСС ДЛЯ РАБТЫ С БАЗОЙ ДАННЫХ И ТАБЛИЦЕЙ СТАВОК
+ */
 @Dao
 public class BetDaoJDBCImpl implements BetDao {
 
@@ -27,7 +31,7 @@ public class BetDaoJDBCImpl implements BetDao {
 
     @Override
     public void add(Bet bet) {
-   //     registerDriver();
+        registerDriver();
 
         try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
              PreparedStatement statement = connection.prepareStatement(INSERT_BET)) {
@@ -41,12 +45,31 @@ public class BetDaoJDBCImpl implements BetDao {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
     }
 
     @Override
     public List<Bet> getAll() {
-        return null;
+        registerDriver();
+        List<Bet> bets = new ArrayList<>();
+        try (Connection connection = DriverManager.getConnection(URL, LOGIN, PASSWORD);
+             PreparedStatement ps = connection.prepareStatement("select * from bets")) {
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Bet bet = new Bet();
+                int betId = rs.getInt(1);
+                int value = rs.getInt(2);
+                Double risk = rs.getDouble(3);
+                bet.setId(betId);
+                bet.setValue(value);
+                bet.setRisk(risk);
+                bets.add(bet);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return bets;
     }
 
     @Override

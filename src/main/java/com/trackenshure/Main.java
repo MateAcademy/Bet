@@ -26,7 +26,8 @@ public class Main {
 
         //вывожу все ставки сделанные в консоли
         Main main = (Main) Injector.getInstance(Main.class);
-        System.out.println(main.betDao.getAll());
+
+        System.out.println("Вывожу список ставок из Базы Данных: \n" + main.betDao.getAll());
 
 
         //получаю обьект класса который описывает ConsoleHandler

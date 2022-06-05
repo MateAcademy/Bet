@@ -48,13 +48,13 @@ public class ConsoleHandler {
                 } catch (NumberFormatException e) {
                     System.out.println("Данные введены не корректно ");
                 }
-
                 betDao.add(bet);
 
+//                System.out.println(betDao.getBet(2));
 
-                Optional<Bet> betFromDb = betDao.getBet(3);
-                betFromDb.ifPresent(x -> {x.setRisk(0.3);
-                    System.out.println(x);});
+//                Optional<Bet> betFromDb = betDao.getBet(3);
+//                betFromDb.ifPresent(x -> {x.setRisk(0.3);
+//                    System.out.println(x);});
 
 //                if (betFromDb.isPresent()) {
 //                    Bet bet1 = betFromDb.get();

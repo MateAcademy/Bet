@@ -30,9 +30,9 @@ public class BetDaoFactory {
     }
 
     private static BetDao getBetDao() {
-        if (betDao == null)
+        if (betDao == null) {
             betDao = new BetDaoImpl();
-//            betDao = new BetDaoJDBCImpl();
+//          betDao = new BetDaoJDBCImpl();
         }
         return betDao;
     }

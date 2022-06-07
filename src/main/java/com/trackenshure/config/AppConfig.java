@@ -11,5 +11,6 @@ import org.springframework.context.annotation.Configuration;
         "com.trackenshure.dao",
         "com.trackenshure.service"
 })
+
 public class AppConfig {
 }

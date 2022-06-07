@@ -13,9 +13,9 @@ import javax.persistence.Id;
  * @author Sergey Klunniy
  */
 @Data
+@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
 public class Movie {
 
     @Id

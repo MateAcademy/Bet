@@ -9,7 +9,7 @@ import java.lang.reflect.InvocationTargetException;
 public class Injector {
 
     public static Object getInstance(Class clazz) throws NoSuchMethodException, IllegalStateException,
-            InvocationTargetException, InstantiationException {
+            InstantiationException, IllegalAccessException, InvocationTargetException {
         Constructor constructor = clazz.getDeclaredConstructor();
         Object instance = constructor.newInstance();
 
